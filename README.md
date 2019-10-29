@@ -25,7 +25,7 @@ A linguagem R vem se destacando nos últimos anos (desde de 2000), como a princi
 ### Informações aos participantes
 
 **Datas e horários** <br>
-06/11 [08:00 h - 12:00 h] 
+06/11 [08:00 h - 12:00 h] <br>
 07/11 [08:00 h - 12:00 h]
 
 **Local** <br>
