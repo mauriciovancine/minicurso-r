@@ -1,8 +1,9 @@
 ---
-title: "30ª Semana de Estudos da Biologia <br><br> Introdução à linguagem R: manipulação e visualização de dados"
+title: "XXX Semana de Estudos da Ecologia <br><br> Introdução à linguagem R: manipulação e visualização de dados"
 subtitle: "<br> 1 Linguagem R, aplicações e material <br>"
 author: "Maurício Vancine <br> Helena Oliveira <br> Lucas Almeida <br>"
-date: "<br> xaringan [presentation ninja] <br> 23/10/2019"
+date: "<br> xaringan [presentation ninja] <br> 06/11/2019"
+encoding: "UTF-8"
 output:
   xaringan::moon_reader:
     css: metropolis
@@ -30,19 +31,6 @@ background-position: 50% 50%
 
 # 1 R, aplicações e material
 
-```{r}
-# teste
-a <- 2
-b <- "asdasdas"
-a
-b
-```
-
-
----
-
-# 1 R, aplicações e material
-
 ## Tópicos
 1.1 Linguagem R
 
@@ -54,7 +42,7 @@ b
 
 ---
 
-background-image: url(figs/falar_r.png)
+background-image: url(img/falar_r.png)
 background-size: 600px
 background-position: 50% 70%
 
@@ -96,13 +84,13 @@ O [Manual do R](https://cran.r-project.org/doc/manuals/r-release/R-intro.pdf)<su
 
 --
 
-background-image: url(figs/programacao.png)
+background-image: url(img/programacao.png)
 background-size: 800px
 background-position: 50% 75%
 
 ---
 
-background-image: url(figs/r_funcionamento.png)
+background-image: url(img/r_funcionamento.png)
 background-size: 700px
 background-position: 50% 50%
 
@@ -135,7 +123,7 @@ background-position: 50% 50%
 ---
 
 class: clear, inverse, middle, center
-background-image: url(figs/ecologia_estatistica.jpg)
+background-image: url(img/ecologia_estatistica.jpg)
 background-size: 600px
 background-position: 50% 50%
 
@@ -194,7 +182,7 @@ class: inverse, middle, center
 
 ---
 
-background-image: url(figs/r_rstudio.png)
+background-image: url(img/r_rstudio.png)
 background-size: 800px
 background-position: 50% 50%
 
@@ -319,7 +307,7 @@ background-position: 50% 70%
 
 ---
 
-background-image: url(figs/site_r1.jpg)
+background-image: url(img/site_r1.jpg)
 background-size: 700px
 background-position: 50% 60%
 
@@ -380,12 +368,15 @@ background-position: 70% 45%
 
 <br><br><br>
 
-[R Ladies - Brazil](https://rladies.org/brazil-rladies/)
+[R Ladies - Brazil](https://rladies.org/brazil-rladies/) <br>
+[What is R-Ladies?](https://beatrizmilz.github.io/CODATA-rladies-04-12-18/#1)
 
-<br><br><br><br>
+<br>
 
 ### Gabriela de Queiroz
 Data Scientist + Founder of R-Ladies + Mentor + Advocate
+
+<br>
 
 [*] https://k-roz.com/
 
@@ -515,7 +506,7 @@ class: inverse, middle, center
 
 ---
 
-background-image: url(figs/libgen_corvo.jpg)
+background-image: url(img/libgen_corvo.jpg)
 background-size: 370px
 background-position: 50% 20%
 
@@ -528,7 +519,7 @@ Obrigado Alexandra Elbakyan!
 
 ---
 
-background-image: url(figs/libgen1.png)
+background-image: url(img/libgen1.png)
 background-size: 800px
 background-position: 50% 55%
 
@@ -540,7 +531,7 @@ background-position: 50% 55%
 
 ---
 
-background-image: url(figs/libgen2.png)
+background-image: url(img/libgen2.png)
 background-size: 800px
 background-position: 50% 55%
 

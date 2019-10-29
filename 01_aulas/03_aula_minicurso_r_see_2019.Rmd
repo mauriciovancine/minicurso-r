@@ -1,8 +1,9 @@
 ---
-title: "30ª Semana de Estudos da Biologia <br><br> Introdução à linguagem R: manipulação e visualização de dados"
+title: "XXX Semana de Estudos da Ecologia <br><br> Introdução à linguagem R: manipulação e visualização de dados"
 subtitle: "<br> 3 Estrutura e manipulação de dados <br>"
 author: "Maurício Vancine <br> Helena Oliveira <br> Lucas Almeida <br>"
-date: "<br> xaringan [presentation ninja] <br> 23/10/2019"
+date: "<br> xaringan [presentation ninja] <br> 06/11/2019"
+encoding: "UTF-8"
 output:
   xaringan::moon_reader:
     css: metropolis
@@ -104,7 +105,7 @@ obj_10
 
 ---
 
-background-image: url(figs/r_modes.png)
+background-image: url(img/r_modes.png)
 background-size: 70%
 background-position: 50% 85%
 
@@ -203,13 +204,13 @@ class: inverse, middle, center
 
 --
 
-background-image: url(figs/data_structures.png)
+background-image: url(img/data_structures.png)
 background-size: 450px
 background-position: 50% 90%
 
 ---
 
-background-image: url(figs/data_structures2.png)
+background-image: url(img/data_structures2.png)
 background-size: 650px
 background-position: 50% 50%
 
@@ -242,7 +243,7 @@ background-position: 50% 50%
 
 ---
 
-background-image: url(figs/vector_math.jpg)
+background-image: url(img/vector_math.jpg)
 background-size: 500px
 background-position: 50% 70%
 
@@ -252,7 +253,7 @@ background-position: 50% 70%
 
 ---
 
-background-image: url(figs/vector_types.png)
+background-image: url(img/vector_types.png)
 background-size: 800px
 background-position: 50% 50%
 
@@ -262,7 +263,7 @@ background-position: 50% 50%
 
 ---
 
-background-image: url(figs/vector_summary_tree.png)
+background-image: url(img/vector_summary_tree.png)
 background-size: 550px
 background-position: 50% 70%
 
@@ -478,7 +479,7 @@ ve
 
 --
 
-background-image: url(figs/r_modes.png)
+background-image: url(img/r_modes.png)
 background-size: 60%
 background-position: 50% 85%
 
@@ -528,7 +529,7 @@ class: inverse, middle, center
 
 ---
 
-background-image: url(figs/factor.png)
+background-image: url(img/factor.png)
 background-size: 70%
 background-position: 50% 75%
 
@@ -1128,7 +1129,7 @@ background-position: 50% 50%
 
 --
 
-background-image: url(figs/list.png)
+background-image: url(img/list.png)
 background-size: 300px
 background-position: 50% 95%
 

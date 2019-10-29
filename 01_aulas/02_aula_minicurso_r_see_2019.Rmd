@@ -1,8 +1,9 @@
 ---
-title: "30ª Semana de Estudos da Biologia <br><br> Introdução à linguagem R: manipulação e visualização de dados"
+title: "XXX Semana de Estudos da Ecologia <br><br> Introdução à linguagem R: manipulação e visualização de dados"
 subtitle: "<br> 2 Funcionamento da linguagem R <br>"
 author: "Maurício Vancine <br> Helena Oliveira <br> Lucas Almeida <br>"
-date: "<br> xaringan [presentation ninja] <br> 23/10/2019"
+date: "<br> xaringan [presentation ninja] <br> 06/11/2019"
+encoding: "UTF-8"
 output:
   xaringan::moon_reader:
     css: metropolis
@@ -57,7 +58,7 @@ background-position: 50% 50%
 
 ---
 
-background-image: url(figs/rstudio.png)
+background-image: url(img/rstudio.png)
 background-size: 800px
 background-position: 50% 50%
 
@@ -65,7 +66,7 @@ background-position: 50% 50%
 
 ---
 
-background-image: url(figs/rstudio.png)
+background-image: url(img/rstudio.png)
 background-size: 700px
 background-position: 50% 70%
 
@@ -77,7 +78,7 @@ background-position: 50% 70%
 
 ---
 
-background-image: url(figs/programar.png)
+background-image: url(img/programar.png)
 background-size: 800px
 background-position: 50% 50%
 
@@ -148,7 +149,7 @@ background-position: 50% 70%
 
 ---
 
-background-image: url(figs/script1.png)
+background-image: url(img/script1.png)
 background-size: 800px
 background-position: 50% 50%
 
@@ -156,7 +157,7 @@ background-position: 50% 50%
 
 ---
 
-background-image: url(figs/script2.png)
+background-image: url(img/script2.png)
 background-size: 800px
 background-position: 50% 50%
 
@@ -166,7 +167,7 @@ background-position: 50% 50%
 
 ---
 
-background-image: url(figs/script3.png)
+background-image: url(img/script3.png)
 background-size: 800px
 background-position: 50% 50%
 
@@ -174,7 +175,7 @@ background-position: 50% 50%
 
 ---
 
-background-image: url(figs/rstudio_console.png)
+background-image: url(img/rstudio_console.png)
 background-size: 800px
 background-position: 50% 50%
 
@@ -182,7 +183,7 @@ background-position: 50% 50%
 
 ---
 
-background-image: url(figs/rstudio_console.png)
+background-image: url(img/rstudio_console.png)
 background-size: 500px
 background-position: 50% 98%
 
@@ -222,7 +223,7 @@ background-position: 50% 98%
 
 ---
 
-background-image: url(figs/rstudio_console_func.png)
+background-image: url(img/rstudio_console_func.png)
 background-size: 800px
 background-position: 50% 50%
 
@@ -238,7 +239,7 @@ class: inverse, center, middle
 
 ---
 
-background-image: url(figs/script3.png)
+background-image: url(img/script3.png)
 background-size: 700px
 background-position: 50% 85%
 
@@ -307,7 +308,7 @@ background-position: 50% 90%
 
 ---
 
-background-image: url(figs/script4.png)
+background-image: url(img/script4.png)
 background-size: 800px
 background-position: 50% 50%
 
@@ -371,26 +372,6 @@ background-position: 50% 50%
 <br><br><br><br><br><br><br><br>
 
 ## .center[`script_aula_02.R`]
-
----
-
-# Sigam as instruções
-
-<br><br><br>
-
-## 1. Fechem o RStudio
-
---
-
-## 2. Abram o RStudio
-
---
-
-## 3. Abram o script salvo `script_aula_02.R`
-
---
-
-## 4. Apaguem seu conteúdo
 
 ---
 
@@ -689,7 +670,7 @@ class: inverse, middle, center
 
 ---
 
-background-image: url(figs/rstudio_ambiente.png)
+background-image: url(img/rstudio_ambiente.png)
 background-size: 800px
 background-position: 50% 50%
 
@@ -1360,7 +1341,7 @@ class: inverse, middle, center
 
 ---
 
-background-image: url(figs/pacotes.png)
+background-image: url(img/pacotes.png)
 background-size: 600px
 background-position: 35% 60%
 
@@ -1401,13 +1382,7 @@ class: inverse, middle, center
 
 ---
 
-class: inverse, middle, center
-
-# Helena não vale...
-
----
-
-background-image: url(figs/rstudio_help.png)
+background-image: url(img/rstudio_help.png)
 background-size: 600px
 background-position: 50% 98%
 
@@ -1425,7 +1400,7 @@ help("mean") # arquivo .html
 
 ---
 
-background-image: url(figs/help.png)
+background-image: url(img/help.png)
 background-size: 600px
 background-position: 50% 50%
 
@@ -1485,7 +1460,7 @@ class: inverse, middle, center
 
 ---
 
-background-image: url(figs/rstudio_ambiente.png)
+background-image: url(img/rstudio_ambiente.png)
 background-size: 800px
 background-position: 50% 50%
 
@@ -1527,16 +1502,23 @@ background-position: 50% 70%
 
 # 2.10 Ambiente (*environment*/*workspace*)
 
-<br><br>
-
 ### Salvar todos os objetos criados
 `Session -> Save Workspace As... -> meus_objetos.RData` 
 
-<br><br>
+```{r,eval=FALSE}
+# save objects
+save.image("meus_objetos.RData")
+```
+
 --
 
 ### Carregar os objetos criados e salvos
 `Session -> Load Workspace... -> meus_objetos.RData` 
+
+```{r,eval=FALSE}
+# load objects
+load.image("meus_objetos.RData")
+```
 
 ---
 
@@ -1734,7 +1716,7 @@ ggplot(iris) + aes(Sepal.Length, Sepal.Width) + geom_point() + theme_bw()
 
 ---
 
-background-image: url(figs/camel_case.png)
+background-image: url(img/camel_case.png)
 background-size: 350px
 background-position: 50% 90%
 
@@ -1747,7 +1729,7 @@ rowSums(iris[1:10, -5])
 
 ---
 
-background-image: url(figs/camel_case.png)
+background-image: url(img/camel_case.png)
 background-size: 350px
 background-position: 50% 90%
 
@@ -1760,7 +1742,7 @@ rowsums(iris[1:10, -5])
 
 ---
 
-background-image: url(figs/camel_case.png), url(figs/snake_case2.png)
+background-image: url(img/camel_case.png), url(img/snake_case2.png)
 background-size: 350px, 400px
 background-position: 8% 60%, 90% 60%
 

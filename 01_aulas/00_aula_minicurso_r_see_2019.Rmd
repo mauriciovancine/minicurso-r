@@ -1,8 +1,9 @@
 ---
-title: "30ª Semana de Estudos da Biologia <br><br> Introdução à linguagem R: manipulação e visualização de dados"
+title: "XXX Semana de Estudos da Ecologia <br><br> Introdução à linguagem R: manipulação e visualização de dados"
 subtitle: ""
 author: "Maurício Vancine <br> Helena Oliveira <br> Lucas Almeida <br>"
-date: "<br> xaringan [presentation ninja] <br><br> 23/10/2019"
+date: "<br> xaringan [presentation ninja] <br><br> 06/11/2019"
+encoding: "UTF-8"
 output:
   xaringan::moon_reader:
     css: metropolis
@@ -102,24 +103,6 @@ background-position: 50% 50%
 
 ---
 
-# Gabriele Farias
-
-## Bióloga (201?)
-
-### Pesquisa
-- ????
-
-### Habilidades
-- ????
-- Organizar minicursos de R
-
-### Contato e informações
-|                                                                                          |                                   |
-| :--------------------------------------------------------------------------------------- | :-------------------------------- |
-| <a href="mailto:gabriele.sfarias@gmail.com">.RUred[<i class="fa fa-envelope fa-fw"></i>] | gabriele.sfarias@gmail.com        |
-
----
-
 # Participantes
 
 ## Apresentações
@@ -138,17 +121,17 @@ background-position: 50% 50%
 
 # Experiência
 
-## Minha história com o R (~470 h)
+## Minha história com o R (~480 h)
 
 <br>
 
 - 2011: Assisti, **Curso de R** (40 h) - Prof. Tadeu Siqueira
 
-- 2015: Minicurso, **Introdução ao software R** (08 h) - SEE
+- 2015: Minicurso, **Introdução ao software R** (08 h) - SEE 2015
 
 - 2015: Monitor, **Ecologia Quantitativa** (60 h) - Prof. Tadeu Siqueira
 
-- 2016: Minicurso, **Introdução software R: manejo de dados, gráficos e análises estatísticas** (16 h) - SEB
+- 2016: Minicurso, **Introdução software R: manejo de dados, gráficos e análises estatísticas** (16 h) - SeBio 2016
 
 - 2016: Monitor, **Modelagem de Nicho Ecológico no R** (30 h) - UNESP
 
@@ -158,7 +141,7 @@ background-position: 50% 50%
 
 # Experiência
 
-## Minha história com o R (~470 h)
+## Minha história com o R (~480 h)
 
 <br>
 
@@ -174,6 +157,8 @@ background-position: 50% 50%
 
 - 2019: Professor visitante, **Introdução ao geoprocessamento para etnobiologia e conservação da biodiversidade ** (45 h) - UFRPE
 
+- 2019: Minicurso, **Introdução à linguagem R: manejo, visualização e análises de dados** (8 h) - SeBio 2019
+
 ---
 
 # Minicurso
@@ -186,8 +171,8 @@ background-position: 50% 50%
 --
 
 ### Datas e horários
-23/10/2019 - 14:00 às 18:00 h (4 h) <br>
-24/10/2019 - 08:00 às 12:00 h (4 h)
+06/11 [08:00 h - 12:00 h] <br>
+07/11 [08:00 h - 12:00 h]
 
 --
 
@@ -202,7 +187,7 @@ Exercícios (2 h)
 ## Material
 
 ### Repositório de dados do minicurso no GitHub
-https://github.com/mauriciovancine/minicurso-r-sebio-2019
+https://github.com/mauriciovancine/minicurso-r-see-2019
 
 --
 
@@ -213,7 +198,7 @@ Criem uma pasta chamada `github` em `Documentos` ou na famigerada `Área de Trab
 
 --
 
-Adicionem o arquivo `minicurso-r-sebio-2019-master.zip` nessa pasta
+Adicionem o arquivo `minicurso-r-see-2019-master.zip` nessa pasta
 
 --
 
@@ -329,9 +314,10 @@ background-position: 75% 75%
 <br>
 4.5 magrittr (*pipe - %>%*)
 <br>
-4.6 dplyr
+4.6 tidyr
 <br>
-4.7 tidyr
+4.7 dplyr
+
 
 ---
 
@@ -379,10 +365,6 @@ background-position: 75% 75%
 ### **Perguntem** o que não entenderam! Não deixem passar dúvidas!
   
 --
-  
-### **Evitem** celular, redes sociais e outras distrações!
-  
---
 
 <br>
 ### Estudar R e estatística geraram muitas **oportunidades** de parcerias em **pesquisas** e principalmente **trabalho**!
@@ -426,7 +408,7 @@ background-position: 50% 60%
 ---
 
 class: clear, inverse, middle, center
-background-image: url(figs/ecologia_estatistica.jpg)
+background-image: url(img/ecologia_estatistica.jpg)
 background-size: 600px
 background-position: 50% 50%
 
@@ -478,7 +460,7 @@ class: clear, inverse, middle, center
 
 ---
 
-background-image: url(figs/planilhas_eletronicas.png)
+background-image: url(img/planilhas_eletronicas.png)
 background-size: 700px
 background-position: 50% 80%
 
