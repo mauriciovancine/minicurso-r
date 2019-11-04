@@ -2,7 +2,7 @@
 title: "XXX Semana de Estudos da Ecologia <br><br> Introdução à linguagem R: manipulação e visualização de dados"
 subtitle: "<br> 3 Estrutura e manipulação de dados <br>"
 author: "Maurício Vancine <br> Helena Oliveira <br> Lucas Almeida <br>"
-date: "<br> xaringan [presentation ninja] <br> 06/11/2019"
+date: "<br> 06/11/2019"
 encoding: "UTF-8"
 output:
   xaringan::moon_reader:
@@ -1918,7 +1918,7 @@ class: inverse, middle, center
 # pasta onde o r ira importar e exportar os arquivos
 
 # definir o diretorio de trabalho
-setwd("/home/mude/data/minicurso-r-see-2019/03_dados")
+setwd("/home/mude/data/github/minicurso-r-see-2019/03_dados")
 ```
 --
 ```{r, eval = FALSE}
@@ -2069,7 +2069,7 @@ da
 ## **head()**: mostra as primeiras 6 linhas
 ```{r, include = FALSE}
 # ler e atribuir uma planilha eletronica (.csv) a um objeto
-da <- read.csv("/home/mude/data/minicurso-r-see-2019/03_dados/ATLANTIC_AMPHIBIANS_sites.csv")
+da <- read.csv("/home/mude/data/github/minicurso-r-see-2019/03_dados/ATLANTIC_AMPHIBIANS_sites.csv")
 ```
 
 ```{r}

@@ -4,6 +4,7 @@
     <title>XXX Semana de Estudos da Ecologia    Introdução à linguagem R: manipulação e visualização de dados</title>
     <meta charset="utf-8" />
     <meta name="author" content="Maurício Vancine   Helena Oliveira   Lucas Almeida" />
+    <meta name="date" content="2019-06-11" />
     <link href="libs/remark-css/metropolis.css" rel="stylesheet" />
     <script src="https://use.fontawesome.com/5235085b15.js"></script>
   </head>
@@ -14,7 +15,7 @@ class: center, middle, inverse, title-slide
 # XXX Semana de Estudos da Ecologia <br><br> Introdução à linguagem R: manipulação e visualização de dados
 ## <br> 3 Estrutura e manipulação de dados <br>
 ### Maurício Vancine <br> Helena Oliveira <br> Lucas Almeida <br>
-### <br> xaringan [presentation ninja] <br> 06/11/2019
+### <br> 06/11/2019
 
 ---
 
@@ -444,7 +445,7 @@ sa_sem_rep
 ```
 
 ```
-##  [1]  93  47 100   4  94  64  24   5   8  88
+##  [1] 53 55 62 79 83 93 37 72 46 19
 ```
 
 --
@@ -457,11 +458,11 @@ sa_com_rep
 ```
 
 ```
-##   [1]  2  9  7  5  5  6  4  9  4  1  5  5  9  6  7  6  9  6  8  2  6  6  8
-##  [24]  9  2  5  5  7  5  1  8  8  7  2  6  9  8  7  3  7  8  4  6  8  1  1
-##  [47]  4  2  5  4 10  3  4 10  5  3  7  5  2  9  3  7 10  2  2  7  3  8 10
-##  [70]  5  2  2  4 10  9  8  4  6  7  4  9  4  4  8  1  9  2  4  1  8  7  9
-##  [93]  1  8  3  4  4  6  7  5
+##   [1]  5  4  4  7  8  3  8  5  1  7  1  6  4  2  5  7  4  6  6  7  1  6  7
+##  [24]  4  6  7  3  8  7  4  3  9  1  3  6  9 10 10  2  6  6 10 10  6 10  2
+##  [47]  8  8  2  2  4  1  9  9 10  1  7  9  8  1  4  1  9  6  8  2  2  6  7
+##  [70]  2  5  1  3  2  9  3  7  6  8  1  6  4  1  5  5  7 10  9  6  9  3  6
+##  [93]  2 10  9 10  5  4 10  9
 ```
 
 ---
@@ -514,7 +515,7 @@ mega_num
 ```
 
 ```
-## [1] 11 45 17 49 23 37
+## [1] 42 44 58 41 54  8
 ```
 
 ---
@@ -534,7 +535,7 @@ dado_25
 ```
 
 ```
-##  [1] 1 1 1 2 2 5 3 1 5 3 4 4 1 5 5 2 1 6 2 5 3 6 3 6 1
+##  [1] 1 4 2 5 6 6 1 3 6 3 2 3 2 4 5 4 6 3 4 2 6 3 6 2 3
 ```
 
 ---
@@ -1272,7 +1273,7 @@ pe
 ```
 
 ```
-## [1] 0 0 0 1
+## [1] 1 1 0 1
 ```
 --
 
@@ -1301,8 +1302,8 @@ df
 
 ```
 ##          pa pe   tr
-## 1 parcela_1  0 trat
-## 2 parcela_2  0 trat
+## 1 parcela_1  1 trat
+## 2 parcela_2  1 trat
 ## 3 parcela_3  0 cont
 ## 4 parcela_4  1 cont
 ```
@@ -1315,7 +1316,7 @@ str(df)
 ```
 ## 'data.frame':	4 obs. of  3 variables:
 ##  $ pa: Factor w/ 4 levels "parcela_1","parcela_2",..: 1 2 3 4
-##  $ pe: int  0 0 0 1
+##  $ pe: int  1 1 0 1
 ##  $ tr: Factor w/ 2 levels "cont","trat": 2 2 1 1
 ```
 
@@ -1334,8 +1335,8 @@ df_c
 
 ```
 ##      pa          pe  tr 
-## [1,] "parcela_1" "0" "2"
-## [2,] "parcela_2" "0" "2"
+## [1,] "parcela_1" "1" "2"
+## [2,] "parcela_2" "1" "2"
 ## [3,] "parcela_3" "0" "1"
 ## [4,] "parcela_4" "1" "1"
 ```
@@ -1346,7 +1347,7 @@ str(df_c)
 ```
 
 ```
-##  chr [1:4, 1:3] "parcela_1" "parcela_2" "parcela_3" "parcela_4" "0" ...
+##  chr [1:4, 1:3] "parcela_1" "parcela_2" "parcela_3" "parcela_4" "1" ...
 ##  - attr(*, "dimnames")=List of 2
 ##   ..$ : NULL
 ##   ..$ : chr [1:3] "pa" "pe" "tr"
@@ -2719,7 +2720,7 @@ class: inverse, middle, center
 # pasta onde o r ira importar e exportar os arquivos
 
 # definir o diretorio de trabalho
-setwd("/home/mude/data/minicurso-r-see-2019/03_dados")
+setwd("/home/mude/data/github/minicurso-r-see-2019/03_dados")
 ```
 --
 
