@@ -4,6 +4,7 @@
     <title>XXX Semana de Estudos da Ecologia    Introdução à linguagem R: manipulação e visualização de dados</title>
     <meta charset="utf-8" />
     <meta name="author" content="Maurício Vancine   Helena Oliveira   Lucas Almeida" />
+    <meta name="date" content="2019-06-11" />
     <link href="libs/remark-css/metropolis.css" rel="stylesheet" />
     <script src="https://use.fontawesome.com/5235085b15.js"></script>
   </head>
@@ -14,7 +15,7 @@ class: center, middle, inverse, title-slide
 # XXX Semana de Estudos da Ecologia <br><br> Introdução à linguagem R: manipulação e visualização de dados
 ## <br> 2 Funcionamento da linguagem R <br>
 ### Maurício Vancine <br> Helena Oliveira <br> Lucas Almeida <br>
-### <br> xaringan [presentation ninja] <br> 06/11/2019
+### <br> 06/11/2019
 
 ---
 
@@ -62,6 +63,8 @@ background-size: 800px
 background-position: 50% 50%
 
 # 2.1 RStudio
+
+## IDE (*Integrated Development Environment*)
 
 ---
 
@@ -297,15 +300,15 @@ print("Isso é o resultado que deve aparecer no console")
 
 ---
 
-background-image: url(https://external-preview.redd.it/fRuJ7ThyWO2S2Qof2rDCTetabr4nnruL4J7ux3mwqw0.jpg?auto=webp&amp;s=5e3bd38ade26e1d03c02f93ebd7defe01a5dc06a)
-background-size: 350px
-background-position: 50% 90%
+background-image: url(img/utf8.png)
+background-size: 700px
+background-position: 50% 70%
 
 # 2.2 Editor/Roteiro (*code*/*script*)
 
 ## Escolher UTF-8
 
-`Ferramentas (Tools) -&gt; Opções Globais (Global Options) -&gt;  (Code) -&gt; s (Saving) -&gt; Default text endcoding (UTF-8)`
+`Ferramentas (Tools) -&gt; Opções Globais (Global Options) -&gt;  (Code) -&gt; s (Saving) -&gt; Default text encoding (UTF-8)`
 
 ---
 
@@ -435,7 +438,7 @@ class: inverse, middle, center
 
 --
 
-### São úteis para **descrever informações** sobre o **script** ou **comandos**
+### Úteis para **descrever informações** sobre o **script** ou **comandos**
 
 --
 
@@ -446,7 +449,7 @@ class: inverse, middle, center
 ### aula 02 - funcionamento do r ###
 
 # seu nome
-# 22-10-2019
+# 06-11-2019
 ```
 
 --
@@ -472,18 +475,6 @@ class: clear, inverse, middle, center
 
 ---
 
-class: clean, inverse, middle, center
-# Aqui organização funciona como seleção natural... =]
-
----
-
-class: inverse, center, middle
-background-image: url(https://media0.giphy.com/media/xT1XGMZdyChId6fvIk/giphy.gif)
-background-size: 700px
-background-position: 50% 50%
-
----
-
 # Organização dos scripts
 
 ### Se você vai usar o R para fazer suas análises, a primeira coisa é ser organizado
@@ -502,7 +493,7 @@ background-position: 50% 50%
 
 --
 
-&lt;br&gt;&lt;br&gt;
+&lt;br&gt;
 
 [Google’s R Style Guide](http://adv-r.had.co.nz/Style.html)
 
@@ -612,7 +603,7 @@ background-position: 50% 50%
 
 class: clear, inverse, center, middle
 
-# Alguém notou esses colchetes a mais?
+# Alguém notou esses colchetes a mais na resposta?
 
 ---
 
@@ -788,11 +779,11 @@ obj
 
 --
 
-1. Nome de objetos só podem **começar por letras (a-z ou A-Z) ou pontos (.)**
+1. Só podem **começar por letras (a-z ou A-Z) ou pontos (.)**
 
 --
 
-2. Nome de objetos só podem **conter letras, números, underscores (_) ou pontos (.)**
+2. Só podem **conter letras, números, underscores (_) ou pontos (.)**
 
 --
 
@@ -1564,10 +1555,6 @@ background-position: 35% 60%
 nrow(available.packages(repos = "http://cran.r-project.org"))
 ```
 
-```
-## [1] 15164
-```
-
 &lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
 
 https://cran.r-project.org/web/packages/available_packages_by_name.html
@@ -1915,8 +1902,8 @@ citation("vegan")
 ##   Kindt, Pierre Legendre, Dan McGlinn, Peter R. Minchin, R. B.
 ##   O'Hara, Gavin L. Simpson, Peter Solymos, M. Henry H. Stevens,
 ##   Eduard Szoecs and Helene Wagner (2019). vegan: Community Ecology
-##   Package. R package version 2.6-0.
-##   https://github.com/vegandevs/vegan
+##   Package. R package version 2.5-6.
+##   https://CRAN.R-project.org/package=vegan
 ## 
 ## A BibTeX entry for LaTeX users is
 ## 
@@ -1924,8 +1911,8 @@ citation("vegan")
 ##     title = {vegan: Community Ecology Package},
 ##     author = {Jari Oksanen and F. Guillaume Blanchet and Michael Friendly and Roeland Kindt and Pierre Legendre and Dan McGlinn and Peter R. Minchin and R. B. O'Hara and Gavin L. Simpson and Peter Solymos and M. Henry H. Stevens and Eduard Szoecs and Helene Wagner},
 ##     year = {2019},
-##     note = {R package version 2.6-0},
-##     url = {https://github.com/vegandevs/vegan},
+##     note = {R package version 2.5-6},
+##     url = {https://CRAN.R-project.org/package=vegan},
 ##   }
 ## 
 ## ATTENTION: This citation information has been auto-generated from

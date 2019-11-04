@@ -230,7 +230,7 @@ background-position: 75% 75%
 ---
 
 background-image: url(https://www.rstudio.com/wp-content/uploads/2018/10/RStudio-Logo-flat.svg)
-background-size: 500px
+background-size: 450px
 background-position: 90% 85%
 
 # Minicurso
@@ -419,7 +419,7 @@ background-position: 50% 50%
 ## O R precisa de um <u>**objetivo**</u> para começar a fazer sentido...
 
 --
-<br>
+
 ### Nesse minicurso teremos dois <u>**objetivos**</u>:
 
 ### 1. **Manipular ou gerenciar** dados (planilhas) de forma mais fácil, automática e reproduzível
@@ -462,13 +462,13 @@ class: clear, inverse, middle, center
 
 background-image: url(img/planilhas_eletronicas.png)
 background-size: 700px
-background-position: 50% 80%
+background-position: 50% 75%
 
 # Planilha eletrônica
 
 ## Funcionamento
 
-### Configurem seus notebooks sempre com região com **lígua inglesa**
+### Configurem seus notebooks sempre com região com <u>**língua inglesa**</u>
 
 ---
 
