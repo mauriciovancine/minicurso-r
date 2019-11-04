@@ -618,7 +618,7 @@ obj_10 <- 10
 
 ### Agora a palavra **obj_10** vale **10**
 
-#### Mas não aconteceu nada....
+### Mas não aconteceu nada....
 
 ---
 
@@ -1337,7 +1337,7 @@ background-position: 35% 60%
 
 # 2.8 Pacotes
 
-```{r,eval=FALSE}
+```{r}
 nrow(available.packages(repos = "http://cran.r-project.org"))
 ```
 
