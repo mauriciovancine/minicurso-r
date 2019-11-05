@@ -2,7 +2,7 @@
 # aula 4 - introducao ao tidyverse
 
 # mauricio vancine
-# 23-10-2019
+# 07-11-2019
 # -------------------------------------------------------------------------
 
 # topicos -----------------------------------------------------------------  
@@ -54,7 +54,7 @@ ve
 
 # 4.3 readr ---------------------------------------------------------------
 # diretorio
-setwd("/home/mude/data/github/minicurso-r-sebio-2019/03_dados")
+setwd("/home/mude/data/github/minicurso-r-see-2019/03_dados")
 
 # formato .csv
 # import sites
@@ -118,9 +118,7 @@ si_replace_na <- si %>%
   tidyr::replace_na(list(year_start = 0))
 si_replace_na
 
-
 # exercicio 14 ------------------------------------------------------------
-
 
 
 # 4.7 dplyr ---------------------------------------------------------------
@@ -152,27 +150,12 @@ si_select <- si %>%
   dplyr::select(contains("sp"))
 si_select
 
-# 2 pull
-# coluna para vetor
-si_pull <- si %>% 
-  dplyr:: pull(id)
-si_pull
-
-si_pull <- si %>% 
-  dplyr::pull(species_number)
-si_pull
-
-# 3 rename
-si_rename <- si %>%
-  dplyr::rename(sp = species_number)
-si_rename
-
-# 4 mutate
+# 2 mutate
 si_mutate <- si %>% 
   dplyr::mutate(record_factor = as.factor(record))
 si_mutate
 
-# 5 arrange
+# 3 arrange
 si_arrange <- si %>% 
   dplyr::arrange(species_number)
 si_arrange
@@ -185,7 +168,7 @@ si_arrange <- si %>%
   dplyr::arrange(-species_number)
 si_arrange
 
-# 6 filter
+# 4 filter
 si_filter <- si %>% 
   dplyr::filter(species_number > 5)
 si_filter
@@ -210,26 +193,7 @@ si_filter <- si %>%
   dplyr::filter(species_number > 5 | state_abbreviation == "BR-PE")
 si_filter
 
-# 7 distinct
-si_distinct <- si %>% 
-  dplyr::distinct(species_number)
-si_distinct
-
-si_distinct <- si %>% 
-  dplyr::distinct(species_number, .keep_all = TRUE)
-si_distinct
-
-# 8 slice 
-si_slice <- si %>% 
-  dplyr::slice(1:10)
-si_slice
-
-# 9 n_sample 
-si_sample_n <- si %>% 
-  dplyr::sample_n(100)
-si_sample_n
-
-# 10 summarise
+# 5 summarise
 si_summarise <- si %>% 
   dplyr::summarise(mean_sp = mean(species_number), sd_sp = sd(species_number))
 si_summarise
@@ -270,10 +234,4 @@ da
 # exercicio 16 ------------------------------------------------------------
 
 
-# exercicio 17 ------------------------------------------------------------
-
-
-# exercicio 18 ------------------------------------------------------------
-
-
-end ---------------------------------------------------------------------
+# end ---------------------------------------------------------------------

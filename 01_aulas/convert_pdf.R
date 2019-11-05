@@ -7,13 +7,13 @@ library(xaringan)
 library(tidyverse)
 
 # directory
-setwd("/home/mude/data/github/minicurso-r-sebio-2019/01_aulas")
+setwd("/home/mude/data/github/minicurso-r-see-2019/01_aulas")
 dir()
 
 # convert rmarkdown
-purrr::map(dir(pattern = ".Rmd")[4:6], pagedown::chrome_print)
+purrr::map(dir(pattern = ".Rmd"), pagedown::chrome_print)
 
-# convert html
-# purrr::map(dir(pattern = ".html"), pagedown::chrome_print)
+pagedown::chrome_print("00_aula_minicurso_r_see_2019.Rmd", 
+                       timeout = 1000)
 
-# end ---------------------------------------------------------------------
+  # end ---------------------------------------------------------------------

@@ -2,7 +2,7 @@
 # aula 5 - visualizacao de dados
 
 # mauricio vancine
-# 24-10-2019
+# 07-11-2019
 # -------------------------------------------------------------------------
 
 # topicos -----------------------------------------------------------------  
@@ -20,7 +20,7 @@
 library(tidyverse)
 
 # directory
-setwd("/home/mude/data/github/minicurso-r-sebio-2019/03_dados")
+setwd("/home/mude/data/github/minicurso-r-see-2019/03_dados")
 
 # importar
 da <- read_csv("ATLANTIC_AMPHIBIANS_sites.csv")
@@ -485,5 +485,23 @@ ggscatter(data = da,
           size = 5,
           xlab = "Esforço amostral", 
           ylab = "Número de espécies")
+
+
+# bonus -------------------------------------------------------------------
+
+# package
+library(datasauRus)
+
+# data + plot
+datasaurus_dozen %>% 
+  dplyr::filter(dataset == "dino") %>% 
+  ggplot() +
+  aes(x = x, y = y) +
+  geom_point(colour = "black", fill = "black", 
+             size = 5, alpha = .5, pch = 21) +
+  theme_classic() +
+  theme(axis.title = element_text(size = 24),
+        axis.text.x = element_text(size = 20),
+        axis.text.y = element_text(size = 20))
 
 # end ---------------------------------------------------------------------
