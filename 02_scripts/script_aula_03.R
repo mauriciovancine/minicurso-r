@@ -146,7 +146,6 @@ fa_no
 levels(fa_no)
 class(fa_no)
 
-
 # exercicio 09 ------------------------------------------------------------
 
 
@@ -181,7 +180,6 @@ ma_cbind <- cbind(vec_1, vec_2)
 ma_cbind
 
 # exercicio 10 ------------------------------------------------------------
-
 
 
 # 4. array: homogeneo (um modo) e multidimensional (mais que duas dimensoes)
@@ -247,103 +245,32 @@ li
 
 
 # 3.4 Manejo de dados unidimensionais -------------------------------------
-# vetor e fator
-# 1 indexacao []
-# fixar a amostragem
-set.seed(42)
-
+## indexacao []
 # vetor
-se <- seq(0, 5, .01)
-se
+vec <- c(6, 1, 3, 6, 10, 5)
+vec
 
+# selecionar elementos
 # seleciona o quinto elemento
-ve[5]
+vec[5]
 
-# seleciona os elementos de 10 a 50
-ve[1:5] 
+# seleciona os elementos do primeiro ao quinto
+vec[1:5]
 
-# seleciona os elementos 10 e 100 e atribuir
-ve_sel <- ve[c(1, 10)]
-ve_sel
+# seleciona o primeiro e o sexto elemento
+vec_sel <- vec[c(1, 6)]
+vec_sel
 
-# retirar o decimo elemento
-ve[-10]
+# retirar elementos
+# retira o quinto elemento
+vec[-5]
 
-# retirar os elementos 20 a 90
-ve[-(2:9)]
+# retira os elementos do primeiro ao quinto
+vec[-(1:5)]
 
-# retirar os elementos 50 e 100 e atribuir
-ve_sub <- ve[-c(5, 10)]
-ve_sub
-
-# 2 selecao condicional: selecionar elementos por condicões 
-# dois vetores
-foo <- 42
-bar <- 23
-
-# operadores relacionais - saidas booleanas (TRUE ou FALSE)
-foo == bar # igualdade
-foo != bar # diferenca 
-foo > bar # maior
-foo >= bar # maior ou igual
-foo < bar # menor
-foo <= bar # menor ou igual
-
-# fixar a amostragem
-set.seed(42)
-
-# vetor
-ve <- rnorm(10)
-ve
-
-# quais valores sao maiores que 1?
-ve > 1 
-
-# valores acima de 1
-ve[ve > 1] 
-
-# atribuir valores maiores que 1
-ve_maior1 <- ve[ve > 1]
-ve_maior1
-
-# maximo
-max(ve)
-
-# minimo
-min(ve)
-
-# amplitude
-range(ve)
-
-# comprimento
-length(ve)
-
-# ordenar crescente
-sort(ve)
-
-# ordenar decrescente
-sort(ve, dec = TRUE)
-
-# arredondamento
-round(ve, digits = 1)
-
-# arredondamento
-round(ve, digits = 0)
-
-# algum?
-any(ve > 1)
-
-# todos?
-all(ve > 1)
-
-# qual(is)?
-which(ve > 1)
-
-# subconjunto
-subset(ve, ve > 1)
-
-# condicao para uma operacao
-ifelse(ve > 1, 1, 0)
+# retira o primeiro e o sexto elemento
+vec_sub <- vec[-c(1, 6)]
+vec_sub
 
 # exercicio 12 ------------------------------------------------------------
 
@@ -376,11 +303,6 @@ df$sp
 df$abu
 df$flo
 
-length(df$abu)
-max(df$abu)
-min(df$abu)
-range(df$abu)
-
 # converter colunas
 mode(df$abu)
 df$abu <- as.character(df$abu)
@@ -398,15 +320,6 @@ set.seed(1)
 df$abu2 <- sample(0:1, nrow(df), rep = TRUE)
 df$abu2
 df
-
-# selecionar linhas de uma matriz ou data frame 
-df[df$abu > 4, ]
-
-# selecionar linhas de uma matriz ou data frame 
-df[df$abu2 == 0, ]
-
-# selecionar linhas de uma matriz ou data frame 
-df[df$flo == "floresta", ]
 
 #  3.6 valores faltantes e especiais --------------------------------------
 # 1 na - not available
@@ -427,26 +340,9 @@ any(is.na(df))
 df_sem_na <- na.omit(df)
 df_sem_na
 
-nrow(df)
-nrow(df_sem_na)
-
-# substituir na por 0
-df[is.na(df)] <- 0
-df
-
 # 2 nan - not a number
 0/0
 log(-1)
-
-# criar um vetor
-ve <- c(1, 2, 3, NA, NaN)
-ve
-
-# verificar a presenca de na
-is.na(ve)
-
-# verificar a presenca de nan
-is.nan(ve)
 
 # 3 inf - infinito
 # limite matematico
@@ -509,9 +405,6 @@ da
 # head(): mostra as primeiras 10 linhas
 head(da)
 
-# head(): mostra as primeiras 10 linhas
-head(da, 10)
-
 # tail(): mostra as ultimas 6 linhas
 tail(da)
 
@@ -548,10 +441,6 @@ da_na <- na.omit(da)
 
 nrow(da)
 nrow(da_na)
-
-# subset das linhas com amostragens de anfibios em pernambuco
-da_sp <- da[da$state == "São Paulo", ]
-da_sp
 
 # 3.10 Exportar dados -----------------------------------------------------
 # planilha eletronica (.csv)

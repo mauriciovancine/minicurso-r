@@ -1,8 +1,9 @@
 ---
-title: "30ª Semana de Estudos da Biologia <br><br> Introdução à linguagem R: manipulação e visualização de dados"
+title: "XXX Semana de Estudos da Ecologia <br><br> Introdução à linguagem R: manipulação e visualização de dados"
 subtitle: "<br> 4 Introdução ao tidyverse <br>"
 author: "Maurício Vancine <br> Helena Oliveira <br> Lucas Almeida <br>"
-date: "<br> xaringan [presentation ninja] <br> 24/10/2019"
+date: "<br> 07/11/2019"
+encoding: "UTF-8"
 output:
   xaringan::moon_reader:
     css: metropolis
@@ -93,11 +94,10 @@ background-size: 800px
 
 ---
 
-background-image: url(http://www.seec.uct.ac.za/sites/default/files/image_tool/images/330/tidy_workflow.png)
-background-size: 800px
+background-image: url(img/tidyverse_total3.png)
+background-size: 700px
 
 # 4.1 tidyverse
-
 
 ---
 
@@ -125,7 +125,7 @@ background-position: 50% 60%
 
 ### Hadley Wickham
 
-<br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 [*] http://vita.had.co.nz/papers/tidy-data.pdf
 
@@ -139,7 +139,7 @@ background-position: 50% 50%
 
 ## Livro: **R for Data Science (2017)**
 
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 [*] https://r4ds.had.co.nz/
 
@@ -153,7 +153,7 @@ background-position: 50% 50%
 
 ## Sites
 
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 [*] https://www.tidyverse.org/
 
@@ -167,7 +167,7 @@ background-position: 50% 50%
 
 ## Sites
 
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 [*] https://rpubs.com/modelthinkingbr/dados
 
@@ -196,7 +196,7 @@ library(tidyverse)
 
 ---
 
-background-image: url(figs/snake_case2.png)
+background-image: url(img/snake_case2.png)
 background-size: 500px
 background-position: 80% 80%
 
@@ -325,18 +325,18 @@ class: inverse, center, middle
 
 ---
 
-# Exercício 13
+# Exercício 12
 
 ## Reescreva as operações utilizando pipes `%>%`:
 `log10(cumsum(1:100))`
 
-`sum(sqrt(rnorm(100)))`
+`sqrt(abs(rnorm(100)))`
 
-`prod(sort(sample(1:10, 10000, rep = TRUE)))`
+`range(sort(sample(1:10, 10000, rep = TRUE)))`
 
 ---
 
-# Exercício 13
+# Exercício 12
 ## Solução
 ```{r,eval=FALSE}
 # solucao
@@ -349,30 +349,31 @@ log10(cumsum(1:100))
 ```
 ---
 
-# Exercício 13
+# Exercício 12
 ## Solução
   
 ```{r,eval=FALSE}
 # 2.
-sum(sort(rnorm(100)))
+sqrt(abs(rnorm(100)))
 
 100 %>% 
   rnorm %>% 
-  sort %>% 
-  sum
+  abs %>% 
+  sqrt
 ```
 ---
 
-# Exercício 13
+# Exercício 12
 ## Solução
 
 ```{r,eval=FALSE}
 # 3.
-scale(sample(1:10, 10000, rep = TRUE))
+range(sort(sample(1:10, 10000, rep = TRUE)))
 
 1:10 %>% 
   sample(10000, rep = TRUE) %>% 
-  scale
+  sort %>% 
+  range
 ```
 
 ---
@@ -765,12 +766,13 @@ class: inverse, center, middle
 
 ---
 
-# Exercício 14
+# Exercício 13
+
 ### Combine as colunas `country`, `state`, `state_abbreviation`, `municipality`, `site`, em uma coluna chamada `local_total` separadas por `, (vírgula + espaço)`, atribuindo o resultado a um novo objeto, utilizando o formato tidyverse
 
 ---
 
-# Exercício 14
+# Exercício 13
 ## Solução
 ```{r}
 si_local <- si %>% 
@@ -816,15 +818,10 @@ background-position: 50% 50%
 
 ## Funções
 **1 select()**: seleciona colunas pelo nome gerando um tibble<br>
-**2 pull()**: seleciona uma coluna como vetor<br>
-**3 rename()**: muda o nome das colunas<br>
-**4 mutate()**: adiciona novas colunas ou adiciona resultados em colunas existentes<br>
-**5 arrange()**: reordenar as linhas com base nos valores de colunas<br>
-**6 filter()**: seleciona linhas com base em valores<br>
-**7 distinc()**: remove linhas com valores repetidos com base nos valores de colunas<br>
-**8 slice()**: seleciona linhas pelos números<br>
-**9 n_sample()**: amostragem aleatória de linhas<br>
-**10 summarise()**: agrega ou resume os dados através de funções, podendo considerar valores das colunas<br>
+**2 mutate()**: adiciona novas colunas ou adiciona resultados em colunas existentes<br>
+**3 arrange()**: reordenar as linhas com base nos valores de colunas<br>
+**4 filter()**: seleciona linhas com base em valores<br>
+**5 summarise()**: agrega ou resume os dados através de funções, podendo considerar valores das colunas<br>
 
 ---
 
@@ -909,69 +906,19 @@ si_select
 
 ---
 
-background-image: url(http://www.flutterbys.com.au/stats/tut/images/vectorizedFnct.png)
-background-size: 800px
-background-position: 50% 50%
-
-# 4.7 dplyr
-
-## **2 pull**
-
----
-
-# 4.7 dplyr
-
-## **2 pull**
-
-```{r}
-# coluna para vetor
-si_pull <- si %>% 
-  dplyr::pull(id)
-si_pull
-```
-
----
-
-# 4.7 dplyr
-
-## **2 pull**
-
-```{r}
-# coluna para vetor
-si_pull <- si %>% 
-  dplyr::pull(species_number)
-si_pull
-```
-
----
-
-# 4.7 dplyr
-
-## **3 rename**
-
-### Renomeia colunas
-```{r}
-# rename sp colum
-si_rename <- si %>%
-  dplyr::rename(sp = species_number)
-si_rename
-```
-
----
-
 background-image: url(http://www.flutterbys.com.au/stats/tut/images/mutate.png)
 background-size: 800px
 background-position: 50% 50%
 
 # 4.7 dplyr
 
-## **4 mutate**
+## **2 mutate**
 
 ---
 
 # 4.7 dplyr
 
-## **4 mutate**
+## **2 mutate**
 
 ### Adiciona colunas novas ou vindas de operações
 ```{r}
@@ -989,13 +936,13 @@ background-position: 50% 50%
 
 # 4.7 dplyr
 
-## **5 arrange**
+## **3 arrange**
 
 ---
 
 # 4.7 dplyr
 
-## **5 arrange**
+## **3 arrange**
 
 ### Ordenar de forma crescente pela coluna **species_number**
 ```{r,eval=FALSE}
@@ -1027,13 +974,13 @@ background-position: 50% 50%
 
 # 4.7 dplyr
 
-## **6 filter**
+## **4 filter**
 
 ---
 
 # 4.7 dplyr
 
-## **6 filter** 
+## **4 filter** 
 
 ### operadores: >, >=, <, <=, ==, !=, is.na, !is.na, %in%
 ### Filtrar para locais com mais de 5 espécies
@@ -1054,7 +1001,7 @@ si_filter
 
 # 4.7 dplyr
 
-## **6 filter** 
+## **4 filter** 
 ### Filtrar para locais sem NA no métodos passivos
 ```{r,eval=FALSE}
 si_filter <- si %>% 
@@ -1073,7 +1020,7 @@ si_filter
 
 # 4.7 dplyr
 
-## **6 filter** 
+## **4 filter** 
 ### Filtrar para locais amostrados com mais de 5 espécies **E** em Pernambuco
 ```{r,eval=FALSE}
 si_filter <- si %>% 
@@ -1090,69 +1037,19 @@ si_filter
 
 ---
 
-# 4.7 dplyr
-
-## **7 distinct**
-### Remove linhas duplicadas considerando a coluna número de espécies
-```{r}
-si_distinct <- si %>% 
-  dplyr::distinct(species_number)
-si_distinct
-```
-
----
-
-# 4.7 dplyr
-
-## **7 distinct**
-### Remove linhas duplicadas considerando a coluna número de espécies e mantém as demais
-```{r}
-si_distinct <- si %>% 
-  dplyr::distinct(species_number, .keep_all = TRUE)
-si_distinct
-```
-
----
-
-# 4.7 dplyr
-
-## **8 slice** 
-### Selecionar linhas 1 a 10
-```{r}
-si_slice <- si %>% 
-  dplyr::slice(1:10)
-si_slice
-```
-
----
-
-# 4.7 dplyr
-
-## **9 n_sample** 
-
-### Amostrar 100 linhas aleatoriamente
-```{r}
-si_sample_n <- si %>% 
-  dplyr::sample_n(100)
-si_sample_n
-```
-
-
----
-
 background-image: url(http://www.flutterbys.com.au/stats/tut/images/summarize.png)
 background-size: 800px
 background-position: 50% 50%
 
 # 4.7 dplyr
 
-## **10 summarise**
+## **5 summarise**
 
 ---
 
 # 4.7 dplyr
 
-## **10 summarise**
+## **5 summarise**
 
 ### Média e desvio padrão do número de espécies total
 
@@ -1166,7 +1063,7 @@ si_summarise
 
 # 4.7 dplyr
 
-## **10 summarise**
+## **5 summarise**
 ### Média e desvio padrão do número de espécies por país
 ```{r}
 si_summarise_group <- si %>% 
@@ -1231,13 +1128,13 @@ class: inverse, center, middle
 
 ---
 
-# Exercício 15
+# Exercício 14
 
 ### Adicione essas novas colunas `alt_log, tem_log e pre_log`, que são a operação `log10` das colunas `altitude,	temperature e	precipitation` e atribua ao mesmo objeto `si` utilizando o formato tidyverse
 
 ---
 
-# Exercício 15
+# Exercício 14
 ## Solução
 ```{r}
 # solucao
@@ -1250,13 +1147,13 @@ si[, 25:28]
 
 ---
 
-# Exercício 16
+# Exercício 15
 
 ### Ordene os dados em forma decrescente pela coluna `altitude`, atribuindo o resultado a um novo objeto utilizando o formato tidyverse
 
 ---
 
-# Exercício 16
+# Exercício 15
 ## Solução
 ```{r}
 # solucao
@@ -1267,13 +1164,13 @@ si_ar
 
 ---
 
-# Exercício 17
+# Exercício 16
 
 ###  Filtre as linhas com `altitude` maior que 1000 mm, `temperature` menor que 15 ºC e `precipitation` maior que 1000 mm, atribuindo o resultado a um novo objeto utilizando o formato tidyverse
 
 ---
 
-# Exercício 17
+# Exercício 16
 ## Solução
 ```{r}
 # solucao
@@ -1282,24 +1179,6 @@ si_fi <- si %>%
                 temperature < 15,
                 precipitation > 1000)
 si_fi
-```
-
----
-
-# Exercício 18
-
-### Amostre 200 linhas aleatoriamente com número de espécies maior que 15 espécies, atribuindo o resultado a um novo objeto utilizando o formato tidyverse
-
----
-
-# Exercício 18
-## Solução
-```{r}
-# solucao
-si_sa <- si %>% 
-  dplyr::filter(species_number > 15) %>% 
-  dplyr::sample_n(200)
-si_sa
 ```
 
 ---
